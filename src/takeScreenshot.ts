@@ -33,6 +33,14 @@ type Options = {
    * @optional
    */
   soundEffectUrl?: string;
+
+  height?: number;
+
+  width?: number;
+
+  x?: number;
+
+  y?: number;
 };
 
 /**
@@ -44,6 +52,10 @@ export const takeScreenshot = async ({
   quality = 0.7,
   type = "image/jpeg",
   soundEffectUrl,
+  x = 0,
+  y = 0,
+  height = 0,
+  width = 0,
 }: Options = {}) => {
   await onCaptureStart?.();
   return navigator.mediaDevices
@@ -73,7 +85,7 @@ export const takeScreenshot = async ({
       await sleep();
 
       // Paint the video frame on a canvas...
-      const canvas = paintVideoFrameOnCanvas(video);
+      const canvas = paintVideoFrameOnCanvas(video, x, y, height, width);
 
       // Set the data URL in state
       const screenshot = canvas.toDataURL(type, quality);

@@ -1,12 +1,12 @@
 {
-  "name": "@xata.io/screenshot",
+  "name": "@lazzyms/screenshot",
   "version": "1.0.0",
   "description": "A zero-dependency browser-native way to take screenshots powered by the native web MediaDevices API.",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/xataio/screenshot"
+    "url": "https://github.com/lazzyms/screenshot"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -23,9 +23,10 @@
     "feedback",
     "screen capture",
     "mediadevices",
-    "getdisplaymedia"
+    "getdisplaymedia",
+    "captureSelected"
   ],
-  "author": "Tejas Kumar <tejas@xata.io>",
+  "author": "Tejas Kumar <tejas@xata.io>, Maulik Sompura <maulik.sompura06@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",

@@ -1,5 +1,6 @@
-# <img alt="Logo" width="56" src="assets/logo.png" /> `@xata.io/screenshot`
+# `@lazzyms/screenshot`
 
+Fork of @xataio/screenshot with enhancement of capture selected area
 This tool uses [native browser APIs](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) to take screenshots of a given web page, tab, window, or the user's entire screen.
 
 ## Demos
@@ -7,7 +8,7 @@ This tool uses [native browser APIs](https://developer.mozilla.org/en-US/docs/We
 Pick your preference. You can easily learn about this project in the following ways:
 
 - Watch an explainer on [YouTube](https://www.youtube.com/watch?v=uC6RbWanoy4).
-- See it in action on [StackBlitz](https://stackblitz.com/edit/node-b86qqd?file=app/routes/index.tsx). You'll need to open the preview in a new window to get around extra iframe security that StackBlitz needs. 
+- See it in action on [StackBlitz](https://stackblitz.com/edit/node-b86qqd?file=app/routes/index.tsx). You'll need to open the preview in a new window to get around extra iframe security that StackBlitz needs.
 - Read about the details on the [Xata Blog](https://xata.io/blog/introducing-screenshot/).
 
 ## Usage
@@ -15,7 +16,7 @@ Pick your preference. You can easily learn about this project in the following w
 First, you'll want to install it:
 
 ```bash
-npm install @xata.io/screenshot
+npm install @lazzyms/screenshot
 ```
 
 Then, you can add it to your app and use it like so:
@@ -47,7 +48,7 @@ if (checkIfBrowserSupported()) {
 | `quality`        | The quality of the final image on a scale of 0 to 1. 0 is lowest quality, 1 is highest.                               | _nope_   | `.7`           |
 | `onCaptureStart` | An `async` function that does stuff when the capture starts. You'll usually want to hide any modals or anything here. | _nope_   |                |
 | `onCaptureEnd`   | An `async` function that does stuff after capture ends. This is usually when you'll want to clean up.                 | _nope_   |                |
-| `type`           | What kind of image do we want? Possible values are `"image/jpeg"`, `"image/png"` and `"image/webp"`.                                  | _nope_   | `"image/jpeg"` |
+| `type`           | What kind of image do we want? Possible values are `"image/jpeg"`, `"image/png"` and `"image/webp"`.                  | _nope_   | `"image/jpeg"` |
 | `soundEffectURL` | Why not play a little camera click sound effect when taking a screenshot?                                             | _nope_   | -              |
 
 ## Contributing
