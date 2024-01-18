@@ -1,6 +1,6 @@
 {
-  "name": "@lazzyms/screenshot",
-  "version": "1.0.0",
+  "name": "screenshot-with-selection",
+  "version": "1.0.2",
   "description": "A zero-dependency browser-native way to take screenshots powered by the native web MediaDevices API.",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -34,6 +34,7 @@
     "@rollup/plugin-typescript": "^8.3.0",
     "npm-run-all": "^4.1.5",
     "rollup": "^2.67.0",
-    "typescript": "^4.6.0-dev.20220205"
+    "typescript": "^5.3.3",
+    "tslib": "^2.6.2"
   }
 }

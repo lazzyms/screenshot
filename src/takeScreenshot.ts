@@ -34,12 +34,28 @@ type Options = {
    */
   soundEffectUrl?: string;
 
+  /**
+   * Height of selection area or the area you want to capture
+   * @optional
+   */
   height?: number;
 
+  /**
+   * Width of selection area or the area you want to capture
+   * @optional
+   */
   width?: number;
 
+  /**
+   * coordinate x of the starting point of selection area or the area you want to capture
+   * @optional
+   */
   x?: number;
 
+  /**
+   * coordinate y of the starting point of selection area or the area you want to capture
+   * @optional
+   */
   y?: number;
 };
 
@@ -52,10 +68,10 @@ export const takeScreenshot = async ({
   quality = 0.7,
   type = "image/jpeg",
   soundEffectUrl,
-  x = 0,
-  y = 0,
-  height = 0,
-  width = 0,
+  x,
+  y,
+  height,
+  width,
 }: Options = {}) => {
   await onCaptureStart?.();
   return navigator.mediaDevices
@@ -69,7 +85,6 @@ export const takeScreenshot = async ({
     .then(async (result) => {
       // So we mount the screen capture to a video element...
       const video = createVideoElementToCaptureFrames(result);
-
       // ...which needs to be in the DOM but invisible so we can capture it.
       document.body.appendChild(video);
 

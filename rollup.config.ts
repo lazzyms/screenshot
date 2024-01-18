@@ -7,7 +7,7 @@ export default {
   output: {
     dir: "dist",
     format: "umd",
-    name: "XataScreenshot",
+    name: "Screenshot-with-selection",
   },
   plugins: [typescript(), commonjs(), resolve()],
 };

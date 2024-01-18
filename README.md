@@ -1,4 +1,4 @@
-# `@lazzyms/screenshot`
+# `screenshot-with-selection`
 
 Fork of @xataio/screenshot with enhancement of capture selected area
 This tool uses [native browser APIs](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) to take screenshots of a given web page, tab, window, or the user's entire screen.
@@ -16,13 +16,16 @@ Pick your preference. You can easily learn about this project in the following w
 First, you'll want to install it:
 
 ```bash
-npm install @lazzyms/screenshot
+npm install screenshot-with-selection
 ```
 
 Then, you can add it to your app and use it like so:
 
 ```js
-import { takeScreenshot, checkIfBrowserSupported } from "@xata.io/screenshot";
+import {
+  takeScreenshot,
+  checkIfBrowserSupported,
+} from "screenshot-with-selection";
 
 /**
  * Only do this if your browser supports it.
@@ -50,9 +53,13 @@ if (checkIfBrowserSupported()) {
 | `onCaptureEnd`   | An `async` function that does stuff after capture ends. This is usually when you'll want to clean up.                 | _nope_   |                |
 | `type`           | What kind of image do we want? Possible values are `"image/jpeg"`, `"image/png"` and `"image/webp"`.                  | _nope_   | `"image/jpeg"` |
 | `soundEffectURL` | Why not play a little camera click sound effect when taking a screenshot?                                             | _nope_   | -              |
+| `height`         | Height of selection area or the area you want to capture                                                              | _nope_   | -              |
+| `width`          | Width of selection area or the area you want to capture                                                               | _nope_   | -              |
+| `x`              | coordinate x of the starting point of selection area or the area you want to capture                                  | _nope_   | -              |
+| `y`              | coordinate y of the starting point of selection area or the area you want to capture                                  | _nope_   | -              |
 
 ## Contributing
 
 You're always welcome to open an issue if you encounter any, or even better, open a PR directly to solve issues. We don't (yet) have more contributing guidelines than this because the project is quite small. This may change as things develop.
 
-Made with ❤️ in Berlin.
+Forked with ❤️ in India.
